@@ -1,0 +1,3 @@
+let a = {value: 1}
+
+export default a

@@ -1,0 +1,7 @@
+.hello {
+  color: red;
+  /*css-loader会识别这是一个本地文件，并将 './my-image.png' 路径，替换为 output 目录中图像的最终路径。 
+    html-loader 也是以相同的方式处理 <img src="./my-image.png" />。
+  */
+  background: url('../sources/icon.png');
+}
