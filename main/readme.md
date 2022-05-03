@@ -31,19 +31,19 @@
 ### 定义
 一个带有apply函数的类，apply函数能接收到compiler作为参数，从而获取到compiler.hooks的各种钩子回回调，添加自己的处理函数事件。
 ### 常用钩子
-compiler.hooks.compilation ：
+1. compiler.hooks.compilation ：
   时机：启动编译创建出 compilation 对象后触发
   参数：当前编译的 compilation 对象
   示例：获取 compilation 实例
-compiler.hooks.make：
+2. compiler.hooks.make：
   时机：正式开始编译时触发
   参数：同样是当前编译的 compilation 对象
   示例：webpack 内置的 EntryPlugin 基于此钩子实现 entry 模块的初始化
-compilation.hooks.optimizeChunks ：
+3. compilation.hooks.optimizeChunks ：
   时机：seal 函数中，chunk 集合构建完毕后触发
   参数：chunks 集合与 chunkGroups 集合
   示例：SplitChunksPlugin 插件基于此钩子实现 chunk 拆分优化
-compiler.hooks.done：
+4. compiler.hooks.done：
   时机：编译完成后触发
   参数：stats 对象，包含编译过程中的各类统计信息
   示例：webpack-bundle-analyzer 插件基于此钩子实现打包分析
